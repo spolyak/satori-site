@@ -18,8 +18,9 @@ block intro
 				.hero-background
 				.hero-intro-content
 					h5.subtitle Russell Williams Group
-					h1.title= 'Satori'
-					p.byline: strong awaken your truth
+					img(src='/images/satori-logo.png')
+					//h1.title= 'Satori'
+					//p.byline: strong awaken your truth
 					p.byline community, individual coaching 
 
 
@@ -34,7 +35,7 @@ block intro
 
 					else
 						#next-meetup(data-id=meetup.id)
-							a(href='/join', data-from=page.path).btn.btn-primary.btn-lg.btn-block.js-auth-trigger Join Now 
+							a(href='/join', data-from=page.path).btn.btn-purple.btn-lg.btn-block.js-auth-trigger Join Now 
 								span.text-thin (be part of the community)			
 			//- Details
 			section.hero-details: .container
@@ -51,19 +52,25 @@ block intro
 						li: p Individual Coaching 
 						li: p Webinars, Blogs, Communities										
 						li: p Collection (store)
+				section.who
+					h3.heading-with-line Who
+					p.text-center
+						img(src='/images/brenda-williams.jpg').img-circle
+					h5.text-center Brenda Williams
+					p As President and Founder of the Russell Williams Group, Brenda Williams has nearly 30 years of strategic planning, branding and creative problem-solving experience that enables her to develop long-term strategic solutions to challenging business issues. Brenda created RWG based on the unique belief that "strategy is human™." She and her team collaborate with executives to develop pre-emptive business strategies that are internalized and acted upon.
+					p Prior to forming RWG, Brenda served 14 years at Leo Burnett global advertising agency as Founder of the Lab, a freestanding subsidiary specializing in brand consulting. She also spent 2 1/2 years at McKinsey & Company, an international management consultancy firm.
+					p Brenda graduated with honors from the University of Colorado, with a double major in Communications and Psychology. Additionally, she has conducted graduate studies at Northwestern University as well as executive studies at the University of Chicago and Harvard University. She is a sought after speaker in the areas of effective brand strategy and corporate alignment.
 //- BODY
 block content
 	.page-content
 		
 		//- About
 		article.section.section--featured.home-about: .container
-			h2 awaken your truth
 			.row: .col-sm-8.col-sm-offset-2
-				p.lead a personal yet communal experience that guides individuals to discover their personal truth, power and potential.
-			if !user
-				.row: .col-sm-4.col-sm-offset-4
-					a(href='/join', data-from=page.path).js-auth-trigger.btn.btn-lg.btn-block.btn-warning.mv-1
-						span.text-caps Join Satori now
+				h3 truth development statement
+				p.lead the CORE of who I am
+				p.lead what i was BORN TO DO and ...
+				p.lead the SPIRIT in which I will go forward and MANIFEST IT! 
 			p.mt-1
 				a(href='/about') Learn more about Russell Williams Group's Satori
 				|  &nbsp;&middot;&nbsp; 
