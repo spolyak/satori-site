@@ -1,0 +1,87 @@
+extends ../../layouts/default
+
+
+//- INCLUDES
+include ../../mixins/post
+include ../../mixins/meetup-talk
+include ../../mixins/advertisement
+
+
+//- INTRO
+block intro
+
+	//- HERO
+	article#hero.hero-meetup.hero-meetup--next
+			
+			//- Intro
+			section.hero-intro.hero-intro--hasmask
+				.hero-background
+				.hero-intro-content
+					h5.subtitle Russell Williams Group
+					img(src='/images/satori-logo.png')
+					//h1.title= 'Satori'
+					//p.byline: strong awaken your truth
+					p.byline community, individual coaching 
+
+
+				.hero-button
+					if user
+						if meetup.rsvpsAvailable || rsvpStatus.rsvped && rsvpStatus.attending
+							h4.hero-button-title Are you coming? 
+								span.text-thin (#{plural(meetup.remainingRSVPs, '* spot left', '* spots left')})
+							include ../../includes/attendance-toggle
+						else
+							.alert.alert-success.mb-0.text-center No more tickets...
+
+					else
+						//#next-meetup(data-id=meetup.id)
+						a(href='/join', data-from=page.path).btn.btn-purple.btn-lg.btn-block.js-auth-trigger Join Now 
+							span.text-thin (be part of the community)			
+			//- Details
+			section.hero-details: .container
+				.row: .col-sm-10.col-sm-offset-1: .row
+				
+				section.attending
+					h3.heading-with-line What
+					p.text-center Satori (悟り) is Japanese for
+					h5.text-center “Sudden Enlightenment”
+					p It is a personal yet communal experience that guides individuals to discover their personal truth, power and potential. It is designed to bring clarity and commitment to becoming the human being you are meant to BE. The focus is on discovering one’s true self and living authentically to BE the full expression of your self. You are in control to take full ownership of your well being and Happiness.
+				section.how
+					h3.heading-with-line How
+					ul.list-unstyled.list-inline.text-center
+						li: p Individual Coaching 
+						li: p Webinars, Blogs, Communities										
+						li: p Collection (store)
+				section.who
+					h3.heading-with-line Who
+					p.text-center
+						img(src='/images/brenda-williams.jpg').img-circle
+					h5.text-center Brenda Williams
+					p As President and Founder of the Russell Williams Group, Brenda Williams has nearly 30 years of strategic planning, branding and creative problem-solving experience that enables her to develop long-term strategic solutions to challenging business issues. Brenda created RWG based on the unique belief that "strategy is human™." She and her team collaborate with executives to develop pre-emptive business strategies that are internalized and acted upon.
+					p Prior to forming RWG, Brenda served 14 years at Leo Burnett global advertising agency as Founder of the Lab, a freestanding subsidiary specializing in brand consulting. She also spent 2 1/2 years at McKinsey & Company, an international management consultancy firm.
+					p Brenda graduated with honors from the University of Colorado, with a double major in Communications and Psychology. Additionally, she has conducted graduate studies at Northwestern University as well as executive studies at the University of Chicago and Harvard University. She is a sought after speaker in the areas of effective brand strategy and corporate alignment.
+//- BODY
+block content
+	.page-content
+		
+		//- About
+		article.section.section--featured.home-about: .container
+			.row: .col-sm-8.col-sm-offset-2
+				h3 truth development statement
+				p.lead the CORE of who I am
+				p.lead what i was BORN TO DO and ...
+				p.lead the SPIRIT in which I will go forward and MANIFEST IT! 
+			p.mt-1
+				a(href='/about') Learn more about Russell Williams Group's Satori
+				|  &nbsp;&middot;&nbsp; 
+				a(href='/members') View the Satori members
+			p.mt-1: a(href="https://twitter.com/RWG15", class="twitter-follow-button", data-show-count="true", data-size="large") Follow @RWG15
+//- JS
+block js
+	//- twitter
+	script.
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+	//- map
+	if google_api_key
+		script(src!='https://maps.googleapis.com/maps/api/js?key=' + google_api_key + '&sensor=false&libraries=places')
+		script(src='/js/views/index.js')
