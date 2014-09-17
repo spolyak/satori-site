@@ -13,10 +13,17 @@ exports = module.exports = function(req, res) {
 	locals.section = 'home';
 	locals.meetup = false;
 	locals.page.title = 'Welcome to Satori';
-	
+
 	locals.rsvpStatus = {};
+	locals.home = {};
+
+	// Load the homepage config
 	
-	
+	view.on('init', function(next) {
+		locals.home.bio = 'bio xxx';
+		next();
+	});
+
 	// Load the first, NEXT meetup
 	
 	view.on('init', function(next) {
@@ -34,6 +41,7 @@ exports = module.exports = function(req, res) {
 	// Load the first, PAST meetup
 	
 	view.on('init', function(next) {
+
 		Meetup.model.findOne()
 			.where('state', 'past')
 			.sort('-startDate')
@@ -68,7 +76,7 @@ exports = module.exports = function(req, res) {
 	// Decide which to render
 	
 	view.on('render', function(next) {
-		
+
 		locals.meetup = locals.activeMeetup || locals.pastMeetup;
 		if (locals.meetup) {
 			locals.meetup.populateRelated('talks[who] rsvps[who]', next);
