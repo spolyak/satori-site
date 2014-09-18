@@ -90,15 +90,6 @@ $('.carousel').carousel({
     ], {duration: 3000, fade: 800});
 
 
-/***** Google maps *****/
-
-   var position = new google.maps.LatLng(50.833332, 4.350000);
-    $('.map-address #map').gmap({'center': position, 'zoom': 15, 'disableDefaultUI':true, 'callback': function() {
-            var self = this;
-            self.addMarker({'position': this.get('map').getCenter() });	
-        }
-    });
-
 
 /***** Subscription form *****/
         
