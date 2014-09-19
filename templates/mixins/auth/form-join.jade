@@ -11,7 +11,7 @@ mixin form-join(args)
 		if args.modal
 			.modal-header
 				button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
-				h4.modal-title Join SydJS
+				h4.modal-title Join Satori
 		div(class=args.modal ? 'modal-body' : null)
 			include ../../includes/social-signin
 			p.auth-form-divider: span.auth-form-divider-text or
@@ -35,10 +35,10 @@ mixin form-join(args)
 				.form-groups
 					.form-group(class=!args.modal ? checkFormError('firstname') : null)
 						label(for='firstname').sr-only First name
-						input(type='text', name='firstname', placeholder='First name', value=!args.modal ? form.firstname : null).form-control.form-control--first
+						input(style='font-size: 14px;',type='text', name='firstname', placeholder='First name', value=!args.modal ? form.firstname : null).form-control.form-control--first
 					.form-group(class=!args.modal ? checkFormError('lastname') : null)
 						label(for='lastname').sr-only Last name
-						input(type='text', name='lastname', placeholder='Last name', value=!args.modal ? form.lastname : null).form-control
+						input(style='font-size: 14px;', type='text', name='lastname', placeholder='Last name', value=!args.modal ? form.lastname : null).form-control
 					.form-group(class=!args.modal ? checkFormError('email') : null)
 						label(for='email').sr-only Email
 						input(type='email', name='email', placeholder='Email', value=!args.modal ? form.email : null).form-control

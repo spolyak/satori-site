@@ -14,7 +14,7 @@ block content
 		.container
 			.row
 				.col-sm-2.nav-logo
-					a(href='') Satori
+					//
 				.col-sm-10.nav-links
 					.show-menu
 						a(href='')
@@ -36,9 +36,9 @@ block content
 						.top-button
 							ul.list-inline
 								li
-									a.btn.btn-top.btn-lg(href='') JOIN
+									a(href='/join', data-from=page.path).js-auth-trigger.btn.btn-top.btn-lg JOIN
 								li
-									a.btn.btn-top-white.btn-lg(href='') LOGIN
+									a(href='/signin', data-from=page.path, data-initial='signin').js-auth-trigger.btn.btn-top-white.btn-lg SIGN IN
 	// Intro 
 	.intro-container
 		.container
@@ -339,7 +339,7 @@ block content
 		.container
 			.row
 				.col-sm-7.copyright
-					p © Russell Williams Group
+					p © Satori Path
 				.col-sm-5.social-icon
 					a.social-icon(href='#')
 						i.fa.fa-facebook
