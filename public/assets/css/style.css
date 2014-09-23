@@ -355,7 +355,8 @@ color: #754C78;
     padding: 0;
 	padding-top: 180px;
 	padding-bottom: 180px;
-    background: url("../img/pattern.png") repeat;
+  background: url("../img/pattern.png") repeat; 
+  /* stp, issue #1 brightness of gallery */
 }
 
 
@@ -798,6 +799,29 @@ a.thumbnail:hover {
     transition: all .7s;
 }
 
+/***** Vision *****/
+
+.vision-container {
+    margin: 0 auto;
+    padding-bottom: 60px;
+    background: #fff;
+    color: #888;
+    text-align: center;
+}
+
+.vision {
+    margin-top: 60px;
+    padding-bottom: 40px;
+}
+
+.vision h3 {
+  color: #8F5E99;
+}
+.vision p {
+  margin-top: 30px;
+    font-size: 22px;
+    line-height: 36px;
+}
 
 /***** Testimonials *****/
 

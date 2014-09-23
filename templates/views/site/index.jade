@@ -21,10 +21,9 @@ block content
 							i.fa.fa-bars
 					a.scroll-link(href='#top-content') Home
 					a.scroll-link(href='#intro') Overview
-					a.scroll-link(href='#services') Purpose
-					a.scroll-link(href='#features') Phases
-					a.scroll-link(href='#portofolio') Guide
-					a.scroll-link(href='#subscribe') Subscribe
+					a.scroll-link(href='#subscribe') Path
+					a.scroll-link(href='#team') Leadership		
+					a(href='/join', data-from=page.path).js-auth-trigger Join
 					a.scroll-link(href='#contact') Contact
 	// Top content 
 	.top-content
@@ -65,6 +64,88 @@ block content
 					h4 Collection (Store)
 					p
 						| Ut lobortis auctor est, quis ornare orci tristique vel. Pellentesque sit amet ultricies nisl. Ut aliquet dolor mi, vitae varius felis elementum.
+	.subscribe-container
+		.container
+			.row
+				.col-sm-12.subscribe
+					h3 Path
+					p
+						| "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec ut urna eget felis mattis tincidunt id sed risus."
+			.row
+				.col-sm-1
+			
+				.col-sm-2
+					a.scroll-link(href='#features').btn.btn-top.btn-lg Phases
+				.col-sm-2
+					.icon
+						i.fa.fa-angle-double-right.fa-4x
+				.col-sm-2
+					a.scroll-link(href='#services').btn.btn-top.btn-lg Life Purpose
+				.col-sm-2
+					.icon
+						i.fa.fa-angle-double-right.fa-4x
+				.col-sm-2
+					a.scroll-link(href='#testimonials').btn.btn-top.btn-lg Truth Statements
+				.col-sm-1				
+			.row
+				.col-sm-1
+				.col-sm-2
+				.col-sm-2								
+				.col-sm-2
+				.col-sm-2
+				.col-sm-2					
+				.col-sm-1
+			.row
+				.col-sm-1
+				.col-sm-2
+				.col-sm-2
+					a.scroll-link(href='#portofolio').btn.btn-top.btn-lg Truth Collage									
+				.col-sm-2
+				.col-sm-2
+					a.scroll-link(href='#vision').btn.btn-top.btn-lg Life Vision
+				.col-sm-2					
+				.col-sm-1					
+	// Features 
+	.features-container
+		.container
+			.row
+				.col-sm-12.features
+					h3 Phases
+					p
+						| Praesent purus turpis, elementum vitae quam quis, porttitor congue neque. Nam et auctor mauris. Proin elementum quis risus non scelerisque.
+			.row
+				.col-lg-1.col-md-1.col-sm-6.features-box
+				.col-lg-2.col-md-2.col-sm-6.features-box
+					.icon
+						i.fa.fa-cloud
+					h4 Your sleeping truth
+					p
+						| Ut lobortis auctor est, quis ornare orci tristique vel. Pellentesque sit amet ultricies nisl. Ut aliquet dolor mi, vitae varius felis elementum.
+				.col-lg-2.col-md-2.col-sm-6.features-box
+					.icon
+						i.fa.fa-clock-o
+					h4 Awakening your truth
+					p
+						| Ut lobortis auctor est, quis ornare orci tristique vel. Pellentesque sit amet ultricies nisl. Ut aliquet dolor mi, vitae varius felis elementum.
+				.col-lg-2.col-md-2.col-sm-6.features-box
+					.icon
+						i.fa.fa-share
+					h4 Sharing your truth
+					p
+						| Ut lobortis auctor est, quis ornare orci tristique vel. Pellentesque sit amet ultricies nisl. Ut aliquet dolor mi, vitae varius felis elementum.
+				.col-lg-2.col-md-2.col-sm-6.features-box
+					.icon
+						i.fa.fa-bolt
+					h4 Becoming your truth
+					p
+						| Ut lobortis auctor est, quis ornare orci tristique vel. Pellentesque sit amet ultricies nisl. Ut aliquet dolor mi, vitae varius felis elementum.
+				.col-lg-2.col-md-2.col-sm-6.features-box
+					.icon
+						i.fa.fa-automobile
+					h4 Pursuing your truth
+					p
+						| Ut lobortis auctor est, quis ornare orci tristique vel. Pellentesque sit amet ultricies nisl. Ut aliquet dolor mi, vitae varius felis elementum.
+				.col-lg-1.col-md-1.col-sm-6.features-box
 	// Services 
 	.services-container
 		.container
@@ -112,48 +193,7 @@ block content
 									i.fa.fa-child
 								| Resolve (Action)
 							p
-								| How will this manifest?
-	// Features 
-	.features-container
-		.container
-			.row
-				.col-sm-12.features
-					h3 Phases
-					p
-						| Praesent purus turpis, elementum vitae quam quis, porttitor congue neque. Nam et auctor mauris. Proin elementum quis risus non scelerisque.
-			.row
-				.col-lg-1.col-md-1.col-sm-6.features-box
-				.col-lg-2.col-md-2.col-sm-6.features-box
-					.icon
-						i.fa.fa-cloud
-					h4 Your sleeping truth
-					p
-						| Ut lobortis auctor est, quis ornare orci tristique vel. Pellentesque sit amet ultricies nisl. Ut aliquet dolor mi, vitae varius felis elementum.
-				.col-lg-2.col-md-2.col-sm-6.features-box
-					.icon
-						i.fa.fa-clock-o
-					h4 Awakening your truth
-					p
-						| Ut lobortis auctor est, quis ornare orci tristique vel. Pellentesque sit amet ultricies nisl. Ut aliquet dolor mi, vitae varius felis elementum.
-				.col-lg-2.col-md-2.col-sm-6.features-box
-					.icon
-						i.fa.fa-share
-					h4 Sharing your truth
-					p
-						| Ut lobortis auctor est, quis ornare orci tristique vel. Pellentesque sit amet ultricies nisl. Ut aliquet dolor mi, vitae varius felis elementum.
-				.col-lg-2.col-md-2.col-sm-6.features-box
-					.icon
-						i.fa.fa-bolt
-					h4 Becoming your truth
-					p
-						| Ut lobortis auctor est, quis ornare orci tristique vel. Pellentesque sit amet ultricies nisl. Ut aliquet dolor mi, vitae varius felis elementum.
-				.col-lg-2.col-md-2.col-sm-6.features-box
-					.icon
-						i.fa.fa-automobile
-					h4 Pursuing your truth
-					p
-						| Ut lobortis auctor est, quis ornare orci tristique vel. Pellentesque sit amet ultricies nisl. Ut aliquet dolor mi, vitae varius felis elementum.
-				.col-lg-1.col-md-1.col-sm-6.features-box
+								| How will this manifest?					
 	// Portofolio 
 	.portofolio-container
 		.container
@@ -204,19 +244,6 @@ block content
 						.gallery-wrap
 							img.img-responsive(src='assets/img/gallery/8.png', alt='')
 							.gallery-img
-	// Subscription 
-	.subscribe-container
-		.container
-			.row
-				.col-sm-12.subscribe
-					h3 Subscribe to Satori Info
-					p
-						| Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec ut urna eget felis mattis tincidunt id sed risus.
-					form.form-inline(action='assets/subscribe.php', method='post')
-						input(type='text', name='email', placeholder='Enter your email')
-						button.btn.btn-subscribe(type='submit') Subscribe
-					.success-message
-					.error-message
 	// Testimonials 
 	.testimonials-container
 		.inner-testimonials
@@ -232,12 +259,7 @@ block content
 								.carousel-inner
 									.item.active
 										p
-											| I would like to create a life where
-											strong I have a better balance between my work and family life
-											| and the things that I will do to contribute to this are
-											strong prioritizing
-											| and
-											strong
+											| Vivamus turpis magna, fringilla vel dapibus sed, pulvinar ut ipsum. Nunc id dapibus ante. Maecenas id dapibus lectus. Sed ipsum erat, egestas lobortis erat a, porttitor adipiscing felis. Integer ac fermentum odio. Nam eu interdum sapien.
 										.author John Doe
 									.item
 										p
@@ -267,6 +289,15 @@ block content
 				.col-lg-3.col-md-3.col-sm-6.slide-up
 					.price-box
 						h2.price-title and MANIFEST IT!
+	// Vision 
+	.vision-container
+		.inner-vision
+			.container
+				.row
+					.col-sm-12
+						h3 Life Vision
+						p
+							img(src="http://placehold.it/500x500&text=Life Vision Content").img-thumbnail						
 	// Team 
 	.team-container
 		.container
