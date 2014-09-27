@@ -25,6 +25,14 @@ block content
 					a.scroll-link(href='#team') Leadership		
 					a(href='/join', data-from=page.path).js-auth-trigger Join
 					a.scroll-link(href='#contact') Contact
+					if user 
+						a(href='/me').user.hidden-xs
+							img(src='/images/avatar.png', width=27).img-circle
+							=user.name.first
+						a(href='/signout')
+							span Sign out
+					else
+						a(href='/signin', data-from=page.path, data-initial='signin').js-auth-trigger Sign In
 	// Top content 
 	.top-content
 		.inner-bg
@@ -86,14 +94,14 @@ block content
 						i.fa.fa-angle-double-right.fa-4x
 				.col-sm-2
 					a.scroll-link(href='#testimonials').btn.btn-top.btn-lg Truth Statements
-				.col-sm-1				
+				.col-sm-1
 			.row
 				.col-sm-1
 				.col-sm-2
-				.col-sm-2								
 				.col-sm-2
 				.col-sm-2
-				.col-sm-2					
+				.col-sm-2
+				.col-sm-2
 				.col-sm-1
 			.row
 				.col-sm-1
@@ -103,8 +111,8 @@ block content
 				.col-sm-2
 				.col-sm-2
 					a.scroll-link(href='#vision').btn.btn-top.btn-lg Life Vision
-				.col-sm-2					
-				.col-sm-1					
+				.col-sm-2
+				.col-sm-1
 	// Features 
 	.features-container
 		.container
@@ -297,7 +305,7 @@ block content
 					.col-sm-12
 						h3 Life Vision
 						p
-							img(src="http://placehold.it/500x500&text=Life Vision Content").img-thumbnail						
+							img(src="http://placehold.it/500x500&text=Life Vision Content").img-thumbnail
 	// Team 
 	.team-container
 		.container
