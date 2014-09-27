@@ -76,7 +76,7 @@ keystone.set('email locals', {
 	utils: keystone.utils,
 	host: (function() {
 		if (keystone.get('env') === 'staging') return 'http://satori-beta.herokuapp.com';
-		if (keystone.get('env') === 'production') return 'http://www.satori-rwg.com';
+		if (keystone.get('env') === 'production') return 'http://www.satori-path.com';
 		return (keystone.get('host') || 'http://localhost:') + (keystone.get('port') || '3000');
 	})()
 });

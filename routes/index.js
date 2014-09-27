@@ -49,6 +49,7 @@ exports = module.exports = function(app) {
 	
 	// Website
 	app.get('/', routes.views.index);
+	app.get('/webinars', routes.views.webinars);
 	app.get('/meetups', routes.views.meetups);
 	app.get('/meetups/:meetup', routes.views.meetup);
 	app.get('/members', routes.views.members);

@@ -13,25 +13,29 @@ block content
 	nav
 		.container
 			.row
-				.col-sm-2.nav-logo
-					//
-				.col-sm-10.nav-links
+				.col-sm-12.nav-links
 					.show-menu
 						a(href='')
 							i.fa.fa-bars
 					a.scroll-link(href='#top-content') Home
 					a.scroll-link(href='#intro') Overview
 					a.scroll-link(href='#subscribe') Path
-					a.scroll-link(href='#team') Leadership		
-					a(href='/join', data-from=page.path).js-auth-trigger Join
+					a.scroll-link(href='#team') Leadership
 					a.scroll-link(href='#contact') Contact
+					span
+						i.fa.fa-angle-down
+					a(href='/webinars') Webinars
+					a(href='/members') Members
+					a(href='/blog') Blog
+					a(href='/store') Store
 					if user 
 						a(href='/me').user.hidden-xs
 							img(src='/images/avatar.png', width=27).img-circle
 							=user.name.first
 						a(href='/signout')
 							span Sign out
-					else
+					else		
+						a(href='/join', data-from=page.path).js-auth-trigger Join						
 						a(href='/signin', data-from=page.path, data-initial='signin').js-auth-trigger Sign In
 	// Top content 
 	.top-content
@@ -41,11 +45,12 @@ block content
 					.col-sm-10.col-sm-offset-1.col-md-10.col-md-offset-1.col-lg-10.col-lg-offset-1.slide-up
 						img(src='/images/satori-logo.png')
 						.top-button
-							ul.list-inline
-								li
-									a(href='/join', data-from=page.path).js-auth-trigger.btn.btn-top.btn-lg JOIN
-								li
-									a(href='/signin', data-from=page.path, data-initial='signin').js-auth-trigger.btn.btn-top-white.btn-lg SIGN IN
+							if !user
+								ul.list-inline
+									li
+										a(href='/join', data-from=page.path).js-auth-trigger.btn.btn-top.btn-lg JOIN
+									li
+										a(href='/signin', data-from=page.path, data-initial='signin').js-auth-trigger.btn.btn-top-white.btn-lg SIGN IN
 	// Intro 
 	.intro-container
 		.container
