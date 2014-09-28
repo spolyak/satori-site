@@ -28,9 +28,9 @@ block content
 					a(href='/members') Members
 					a(href='/blog') Blog
 					a(href='/store') Store
-					if user 
+					if user
 						a(href='/me').user.hidden-xs
-							img(src='/images/avatar.png', width=27).img-circle
+							img(src=(user.photo.exists ? user._.photo.thumbnail(27,27) : user.avatarUrl || '/images/avatar.png'), width=27).img-circle
 							=user.name.first
 						a(href='/signout')
 							span Sign out
