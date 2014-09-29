@@ -51,7 +51,7 @@ User.add({
 		want: { type: String, label: 'Wants...', dependsOn: deps.mentoring }
 	}
 }, 'Permissions', {
-	isAdmin: { type: Boolean, label: 'Can Admin SydJS' },
+	isAdmin: { type: Boolean, label: 'Can Admin Satori' },
 	isVerified: { type: Boolean, label: 'Has a verified email address' }
 }, 'Services', {
 	services: {
@@ -236,11 +236,11 @@ User.schema.methods.resetPassword = function(callback) {
 		new keystone.Email('forgotten-password').send({
 			user: user,
 			link: '/reset-password/' + user.resetPasswordKey,
-			subject: 'Reset your SydJS Password',
+			subject: 'Reset your Satori Password',
 			to: user.email,
 			from: {
-				name: 'SydJS',
-				email: 'contact@sydjs.com'
+				name: 'Satori',
+				email: 'brenda@satori.com'
 			}
 		}, callback);
 		
