@@ -38,12 +38,19 @@ block content
 						a(href='/join', data-from=page.path).js-auth-trigger Join						
 						a(href='/signin', data-from=page.path, data-initial='signin').js-auth-trigger Sign In
 	// Top content 
-	.background#bgVideo
-		.container
-			.row
-				.col-sm-12
-					.hero-unit
-					| Bootstrap Sites	
+	.top-content
+		.inner-bg
+			.container
+				.row
+					.col-sm-10.col-sm-offset-1.col-md-10.col-md-offset-1.col-lg-10.col-lg-offset-1.slide-up
+						img(src='/images/satori-logo.png')
+						.top-button
+							if !user
+								ul.list-inline
+									li
+										a(href='/join', data-from=page.path).js-auth-trigger.btn.btn-top.btn-lg JOIN
+									li
+										a(href='/signin', data-from=page.path, data-initial='signin').js-auth-trigger.btn.btn-top-white.btn-lg SIGN IN
 	// Intro 
 	.intro-container
 		.container
@@ -403,6 +410,4 @@ block content
 	script(src='assets/js/jquery.prettyPhoto.js')
 	script(src='assets/js/jquery.inview.js')
 	script(src='assets/js/main.js')
-	script(src='assets/js/jquery.backgroundvideo.min.js')
-	script(src='assets/js/froogaloop.min.js')
-	script(src='assets/js/startup-kit.js')			
+
