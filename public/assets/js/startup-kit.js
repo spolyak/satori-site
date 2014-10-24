@@ -594,10 +594,10 @@ startupKit.attachBgVideo = function() {
     if (!isMobile.any() && videBgDiv) {
         var videobackground = new $.backgroundVideo(videBgDiv, {
             "align" : "centerXY",
-            "path" : "video/",
+            "path" : "/video/",
             "width": 1280,
             "height": 720,
-            "filename" : "preview",
+            "filename" : "satori1",
             "types" : ["mp4", "ogg", "webm"]
         });
     }

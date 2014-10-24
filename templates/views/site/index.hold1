@@ -1,0 +1,207 @@
+doctype html
+html(lang='en')
+head
+    meta(charset='utf-8')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    meta(name='description', content='Stylishly Crafted Premium Bootstrap Themes. Created by Designmodo. Blcktie, handsome bootstrap themes.')
+    meta(name='author', content='Carlos Alvarez')
+    link(rel='shortcut icon', href='startup/flat-ui/images/favicon.ico')
+    link(rel='stylesheet', href='assets/bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='assets/css/flat-ui.css')
+    //
+       Using only with Flat-UI (free)
+    link(rel='stylesheet', href='startup/common-files/css/icon-font.css')
+    //
+       end 
+    link(rel='stylesheet', href='startup/common-files/css/animations.css')
+    link(rel='stylesheet', href='assets/css/lightbox.css')
+    link(rel='stylesheet', href='assets/css/style-video.css')
+    title= page.title
+  body
+    .page-wrapper
+      nav
+        .container
+          .row
+            .col-sm-12.nav-links
+              .show-menu
+                a(href='')
+                  i.fa.fa-bars
+              a.scroll-link(href='#top-content') Home
+              a.scroll-link(href='#intro') Overview
+              a.scroll-link(href='#subscribe') Path
+              a.scroll-link(href='#team') Leadership
+              a.scroll-link(href='#contact') Contact
+              a(href='#')
+                i.fa.fa-angle-down
+              a(href='/webinars') Webinars
+              a(href='/members') Members
+              a(href='/blog') Blog
+              a(href='/store') Store
+              if user
+                a(href='/me').user.hidden-xs
+                  img(src=(user.photo.exists ? user._.photo.thumbnail(27,27) : user.avatarUrl || '/images/avatar.png'), width=27).img-circle
+                  =user.name.first
+                a(href='/signout')
+                  span Sign out
+              else		
+                a(href='/join', data-from=page.path).js-auth-trigger Join						
+                a(href='/signin', data-from=page.path, data-initial='signin').js-auth-trigger Sign In
+      header.header-23
+      section.header-23-sub.bg-midnight-blue
+        #bgVideo.background  
+        .container
+          .row
+            .col-sm-12
+              .hero-unit
+                img(src="assets/img/satori-logo.png", width='400', height='400')
+      section.content-5
+        .container
+          img(src='startup/common-files/icons/premiumlogo.png', width='200', height='200', alt='')
+          .row
+            .col-sm-10.col-sm-offset-1
+              h3 Perfect for your project
+              p.lead Designs & Code Stylishly Crafted
+          .row.features
+            .col-sm-4.col-sm-offset-2
+              span.fui-cmd  
+              h6 Save Your Time
+              p
+                | Create your sites in just minutes. Modify one of the samples themes or craft yours with the awesome Startup Framework.
+            .col-sm-4.col-sm-offset-1
+              span.fui-windows  
+              h6 Responsive Layout
+              p
+                | Of course we haven’t forgotten about the responsive layout. Create a website with full mobile
+                | support.
+          .row.features
+            .col-sm-4.col-sm-offset-2
+              span.fui-upload  
+              h6 Retina Ready
+              p
+                | Startup Framework really works fine on devices supporting Retina Display. Feel the clarity in each
+                | pixel.
+            .col-sm-4.col-sm-offset-1
+              span.fui-credit-card  
+              h6 Money Saving
+              p
+                | Save money on design and code and spend it on what you need more. Don't waste your resources.
+          .row.features
+            .col-sm-4.col-sm-offset-2
+              span.fui-eye  
+              h6 Fits Your Needs
+              p
+                | No matter what kind of content you put in there. Everything will look great in your new themes.
+            .col-sm-4.col-sm-offset-1
+              span.fui-document  
+              h6 Well Documented
+              p
+                | Along with the framework files you also get a full documentation file that will get you trough the customization process.
+      header.header-12
+        .container
+          .row
+            .navbar
+              .navbar-header
+                a.brand(href='http://designmodo.com/startup/?u=999')
+                  span.fui-loop  
+                  | Startup Framework
+                .nav
+                  a(href='http://designmodo.com/shop/?u=999') DESIGNMODO
+                  | &
+                  a(href='http://blacktie.co') BLACKTIE
+      section.header-12-sub.bg-midnight-blue
+        .background  
+        .container
+          .row
+            .col-sm-5
+              .hero-unit
+                h1
+                  | We create a partnership with Designmodo to offer the best Framework to our users!
+                p
+                  | Startup Design Framework contains components and complex blocks which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated, allowing you to create hundreds of solutions for your projects.
+            .aside
+              div
+                span.fui-loop  
+                h3 Grab It Now!
+                p.muted AND GET THIS COOL DISCOUNT
+                .price
+                  .currency
+                  | -15%
+                p Promo Code: "blacktie"
+                a.btn(href='http://designmodo.com/startup/?u=999') Just Get it Now
+      section.content-36
+        .container
+          h2 A tailored design that will help your project to look even better
+          a.btn.btn-success(href='http://designmodo.com/startup/?u=999') Buy Now
+          p
+            | No matter if you need a basic landing page or a complex business site, Startup Framework comes with all the tools to convert your site in something unique.
+      section.content-15.v-center
+        div
+          .container
+            .row
+              h3.col-sm-10.col-sm-offset-1
+                | We specialize in designing elegant, clean and beautiful Bootstrap Themes for both beginners & experts.
+            .row
+              .col-sm-6
+                p
+                  | With more than a 100,000 downloads, BlackTie's themes became a top choice for those looking for a free and elegant template for their sites. Now, we step forward to facilitate a premium set of themes stylishly tailored.
+              .col-sm-6
+                p
+                  | Choose what fits best for your needs. Use the Premium Startup Framework to create your own site or modify the sample Themes and edit their content easily. Your project will look amazing without efforts.
+            .row
+              br
+              br
+              h3.col-sm-10.col-sm-offset-1
+                | Some of our awesome samples.
+
+      section.content-36
+        .container
+          h2 What are you waiting for? Use our discount code and grab it now!
+          a.btn.btn-success(href='http://designmodo.com/startup/?u=999') Buy it Now - Promo Code: blacktie
+          p
+            | Pssst! Did you know that this page was crafted using the Startup Framework? Awesome right! Don't waste your time, this is THE BEST solution for your business.
+      footer.footer-13
+        .container
+          nav.pull-left
+            ul
+              h6
+                | BlackTie
+                b Premium
+          nav.pull-right
+            ul
+              li
+                a(href='http://blacktie.co') HOME
+              li
+                a(href='http://blacktie.co/about/') CONTACT
+              li
+                a(href='http://designmodo.com/startup/?u=999') STARTUP FRAMEWORK
+              li
+                a(href='http://eepurl.com/IcgkX') SUBSCRIPTIONS
+      //
+         Placed at the end of the document so the pages load faster 
+      script(src='assets/js/jquery-1.10.2.min.js')
+      script(src='assets/bootstrap/js/bootstrap.min.js')
+      script(src='assets/js/modernizr.custom.js')
+      script(src='assets/js/masonry.pkgd.min.js')
+      script(src='assets/js/imagesloaded.js')
+      script(src='assets/js/AnimOnScroll.js')
+      script(src='assets/js/lightbox.js')
+      script(src='assets/js/classie.js')
+      script
+        new AnimOnScroll( document.getElementById( 'grid' ), {
+        minDuration : 0.4,
+        maxDuration : 0.7,
+        viewportFactor : 0.2
+        } );
+      script(src='assets/js/page-transitions.js')
+      script(src='assets/js/easing.min.js')
+      script(src='assets/js/jquery.svg.js')
+      script(src='assets/js/jquery.svganim.js')
+      script(src='assets/js/jquery.backgroundvideo.min.js')
+      script(src='assets/js/froogaloop.min.js')
+      script(src='assets/js/startup-kit.js')
+
