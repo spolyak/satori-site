@@ -12,6 +12,15 @@ block content
 	// Top menu 
 	nav
 		.container
+			.row.ticker-row-spacing
+				.col-sm-12.ticker-row-spacing
+					ul.js-hidden#js-news
+						li.news-item
+							a(href="#") This is the 1st latest news item.
+						li.news-item							
+							a(href="#") This is the 2nd latest news item.
+						li.news-item							
+							a(href="#") This is the 3rd latest news item.														
 			.row
 				.col-sm-12.nav-links
 					.show-menu
@@ -397,6 +406,7 @@ block content
 	// Javascript 
 	script(src='/js/lib/jquery/jquery-1.10.2.min.js')
 	//script(src='assets/js/jquery-1.10.2.min.js')
+	script(src='assets/js/ticker/jquery.ticker.js')
 	script(src='assets/bootstrap/js/bootstrap.min.js')
 	script(src='assets/js/jquery.backstretch.min.js')
 	script(src='http://maps.google.com/maps/api/js?sensor=true')

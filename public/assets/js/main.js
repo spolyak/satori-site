@@ -14,6 +14,8 @@ function scroll_to(clicked_link, nav_height) {
 
 jQuery(document).ready(function() {
 	
+	$('#js-news').ticker({controls: false});
+
 	/***** Navigation *****/
 
 	$('a.scroll-link').on('click', function(e) {
@@ -157,6 +159,7 @@ $('.carousel').carousel({
 
     
 });
+
 
     
 

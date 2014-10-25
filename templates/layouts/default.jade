@@ -19,7 +19,7 @@ html
 		title= page.title
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 		link(href="/styles/site.min.css", rel="stylesheet")
-		
+
 		if user && user.canAccessKeystone
 			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
 
@@ -32,7 +32,7 @@ html
 			
 			//- APP ALERT
 			if section == 'home'
-				//include ../includes/layout/app-alert
+				include ../includes/layout/app-alert
 
 			//- SITE HEADER
 			include ../includes/layout/header

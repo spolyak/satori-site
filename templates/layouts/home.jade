@@ -19,7 +19,8 @@ html(lang='en')
 		link(rel='stylesheet', href='assets/css/prettyPhoto.css')
 		link(rel='stylesheet', href='assets/css/animate.css')
 		link(rel='stylesheet', href='assets/css/style.css')
-		link(href="/styles/site.min.css", rel="stylesheet")			
+		link(href="/styles/site.min.css", rel="stylesheet")
+		link(href="assets/css/ticker/ticker-style.css", rel="stylesheet")
 		// HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries 
 		//if lt IE 9
 		script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
@@ -30,6 +31,7 @@ html(lang='en')
 	body
 
 		block body
+			include ../includes/layout/app-alert
 			block content			
 
 		//- MODALS

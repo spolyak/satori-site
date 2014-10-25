@@ -1666,3 +1666,8 @@ section * {
   width: 100%;
   height: 100%;
 }
+
+.ticker-row-spacing {
+  line-height: 0px;
+  height: 30px;
+}
