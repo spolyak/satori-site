@@ -1564,8 +1564,10 @@ section * {
   left: 0;
   width: 100%;
   position: relative;
-  padding-top: 360px;
-  padding-bottom: 270px;
+  /* padding-top: 360px;
+     padding-bottom: 270px; */
+  padding-top: 60px;
+  padding-bottom: 10px;    
   color: white;
   text-align: center;
   background: #1b1e21;
@@ -1575,8 +1577,10 @@ section * {
 }
 @media (max-width: 991px) {
   .header-23-sub {
-    padding-top: 260px;
-    padding-bottom: 170px;
+    /* padding-top: 260px;
+    padding-bottom: 170px; */
+    padding-top: 60px;
+    padding-bottom: 10px;
   }
 }
 .header-23-sub #bgVideo {
