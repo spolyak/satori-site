@@ -544,8 +544,9 @@ startupKit.uiKitHeader.header23 = function() {
 
 
     var iframe = $('#pPlayer')[0];
-    var player = $f(iframe);
-    player.addEvent('ready', function() {});
+    //stp - remove
+    //var player = $f(iframe);
+    //player.addEvent('ready', function() {});
 
     function addEvent(element, eventName, callback) {
         if (element.addEventListener) {
