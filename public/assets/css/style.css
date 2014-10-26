@@ -283,8 +283,9 @@ nav {
 	-moz-box-shadow: 0 2px 0 #e4e6e9;
   	-webkit-box-shadow: 0 2px 0 #e4e6e9;
   	box-shadow: 0 2px 0 #e4e6e9;
-    font-family: 'Open Sans', sans-serif;
-	font-weight: 400; 
+    /* font-family: 'Open Sans', sans-serif; */
+  font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+	/*font-weight: 400; */
     font-size: 14px;
     line-height: 48px;
 }
