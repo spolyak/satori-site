@@ -28,7 +28,8 @@ keystone.set('500', function(err, req, res, next) {
 var routes = {
 	api: importRoutes('./api'),
 	views: importRoutes('./views'),
-	auth: importRoutes('./auth')
+	auth: importRoutes('./auth'),
+	rss: importRoutes('./rss')
 };
 
 // Bind Routes
@@ -91,11 +92,14 @@ exports = module.exports = function(app) {
 	// Maintenace
 	app.all('/maintenance', routes.views.maintenance);
 	
+	// rss
+	app.all('/rss/latest', routes.rss.latest);
+
 	// API
 	app.all('/api*', keystone.initAPI);
 	app.all('/api/me/meetup', routes.api.me.meetup);
 	app.all('/api/stats', routes.api.stats);
-	
+
 	// API - App
 	app.all('/api/app/status', routes.api.app.status);
 	app.all('/api/app/rsvp', routes.api.app.rsvp);

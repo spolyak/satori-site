@@ -14,7 +14,7 @@ function scroll_to(clicked_link, nav_height) {
 
 jQuery(document).ready(function() {
 	
-	$('#js-news').ticker({controls: false});
+	$('#js-news').ticker({controls: false,ajaxFeed: true,htmlFeed: false,feedUrl: 'http://localhost:3000/rss/latest',feedType: 'xml'});
 
 	/***** Navigation *****/
 
