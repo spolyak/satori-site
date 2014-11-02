@@ -24,4 +24,4 @@ LinkComment.add({
  */
 
 LinkComment.defaultColumns = 'author, date|20%';
-LinkComment.register();
+//LinkComment.register();

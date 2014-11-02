@@ -57,12 +57,13 @@ exports.initLocals = function(req, res, next) {
 
 exports.loadSponsors = function(req, res, next) {
 	
-	keystone.list('Organisation').model.find().sort('name').exec(function(err, sponsors) {
+	/* keystone.list('Organisation').model.find().sort('name').exec(function(err, sponsors) {
 		if (err) return next(err);
 		req.sponsors = sponsors;
 		res.locals.sponsors = sponsors;
 		next();
-	});
+	}); */
+	next();
 	
 }
 

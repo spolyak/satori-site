@@ -48,4 +48,4 @@ RSVP.schema.post('remove', function() {
 
 RSVP.defaultColumns = 'meetup, who, createdAt';
 RSVP.defaultSort = '-createdAt';
-RSVP.register();
+//RSVP.register();

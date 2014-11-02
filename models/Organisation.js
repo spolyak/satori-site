@@ -35,4 +35,4 @@ Organisation.relationship({ ref: 'User', refPath: 'organisation', path: 'members
 
 Organisation.addPattern('standard meta');
 Organisation.defaultColumns = 'name, website, isHiring';
-Organisation.register();
+//Organisation.register();

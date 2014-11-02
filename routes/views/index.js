@@ -25,7 +25,7 @@ exports = module.exports = function(req, res) {
 	});
 
 	// Load the first, NEXT meetup
-	
+	/*
 	view.on('init', function(next) {
 		Meetup.model.findOne()
 			.where('state', 'active')
@@ -85,6 +85,7 @@ exports = module.exports = function(req, res) {
 		}
 		
 	});
+*/
 	
 	view.render('site/index');
 	

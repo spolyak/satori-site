@@ -93,11 +93,23 @@ keystone.set('email locals', {
 	})()
 });
 
-keystone.set('nav', {
-	'meetups': ['meetups', 'talks', 'rsvps'],
-	'members': ['users', 'organisations'],
+/* keystone.set('nav', {
+	'webinars': ['webinars'],	
+//	'meetups': ['meetups', 'talks', 'rsvps'],
 	'posts': ['posts', 'post-categories', 'post-comments'],
-	'links': ['links', 'link-tags', 'link-comments']
+	'links': ['links', 'link-tags'],
+//	'links': ['links', 'link-tags', 'link-comments'],
+//	'members': ['users', 'organisations'],	
+	'members': ['users']	
+
+}); */
+
+keystone.set('nav', {
+	'webinars': ['webinars'],	
+	'posts': ['posts', 'post-categories', 'post-comments'],
+	'links': ['links', 'link-tags'],
+	'store': ['store-items'],	
+	'members': ['users']	
 });
 
 keystone.start();

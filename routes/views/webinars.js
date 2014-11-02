@@ -1,8 +1,7 @@
 var keystone = require('keystone'),
-	moment = require('moment'),
-	RSVP = keystone.list('RSVP');
+	moment = require('moment');
 
-var Meetup = keystone.list('Meetup');
+var Webinar = keystone.list('Webinar');
 
 exports = module.exports = function(req, res) {
 	
@@ -12,23 +11,23 @@ exports = module.exports = function(req, res) {
 	locals.section = 'webinars';
 	locals.page.title = 'Webinars - Satori';
 	
-	view.query('upcomingMeetup',
-		Meetup.model.findOne()
+	view.query('upcomingWebinar',
+		Webinar.model.findOne()
 			.where('state', 'active')
 			.sort('-startDate')
 	, 'talks[who]');
 	
-	view.query('pastMeetups',
-		Meetup.model.find()
+	view.query('pastWebinars',
+		Webinar.model.find()
 			.where('state', 'past')
 			.sort('-startDate')
 	, 'talks[who]');
 	
 	view.on('render', function(next) {
 	
-		if (!req.user || !locals.upcomingMeetup) return next();
+		if (!req.user || !locals.upcomingWebinar) return next();
 		
-		RSVP.model.findOne()
+		/* RSVP.model.findOne()
 			.where('who', req.user._id)
 			.where('meetup', locals.upcomingMeetup)
 			.exec(function(err, rsvp) {
@@ -37,7 +36,7 @@ exports = module.exports = function(req, res) {
 					attending: rsvp && rsvp.attending ? true : false
 				}
 				return next();
-			});
+			}); */
 			
 	});
 	

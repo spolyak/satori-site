@@ -30,8 +30,9 @@ block content
 					a(href='/blog') Blog
 					a(href='/store') Store
 					if user
-						a(href='/keystone')
-							span Edit
+						if user.canAccessKeystone
+							a(href='/keystone')
+								span Edit
 						a(href='/me').user.hidden-xs
 							img(src=(user.photo.exists ? user._.photo.thumbnail(27,27) : user.avatarUrl || '/images/avatar.png'), width=27).img-circle
 							| &nbsp;

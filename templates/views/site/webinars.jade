@@ -1,5 +1,5 @@
 extends ../../layouts/default
-include ../../mixins/meetup
+include ../../mixins/webinar
 
 block intro
 	.container-sm
@@ -7,29 +7,29 @@ block intro
 			h1.page-title Webinars
 			p.lead Satori sessions with the community 
 				if !user
-					a(href='/join').js-auth-trigger our&nbsp;next&nbsp;meetup
+					a(href='/join').js-auth-trigger our&nbsp;next&nbsp;webinar
 				else
 					| our next webinar
 				| . Stay in the loop - 
 				a(href='http://twitter.com/RWG15', target='_blank') follow Brenda on twitter
 
-		if upcomingMeetup
-			+meetup(upcomingMeetup)
+		if upcomingWebinar
+			+webinar(upcomingWebinar)
 block content
 	.page-content: .container
 		.timeline
 			.timeline-path
 			.timeline-item--offset
-			each meetup, i in pastMeetups
+			each webinar, i in pastWebinars
 				.timeline-item(class=i % 2 == 1 ? 'timeline-item--even' : 'timeline-item--odd')
 					.timeline-item-node
-					a(href=meetup.url).timeline-item-inner
-						h6.text-caps.text-danger= meetup._.startDate.format('YYYY - MMMM ')
-						h4= meetup.name
-						!=utils.cropString( utils.htmlToText(meetup.description), 240, '...', true )
+					a(href=webinar.url).timeline-item-inner
+						h6.text-caps.text-danger= webinar._.startDate.format('YYYY - MMMM ')
+						h4= webinar.name
+						!=utils.cropString( utils.htmlToText(webinar.description), 240, '...', true )
 						//- !=utils.htmlToText(meetup.description)
 		
-		if !upcomingMeetup && !pastMeetups.length
+		if !upcomingWebinar && !pastWebinars.length
 			h3.text-muted There are no webinars yet.
 
 //- block js

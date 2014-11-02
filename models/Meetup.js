@@ -157,4 +157,4 @@ Meetup.schema.set('toJSON', {
 Meetup.addPattern('standard meta');
 Meetup.defaultSort = '-startDate';
 Meetup.defaultColumns = 'name, state|10%, startDate|15%, publishedDate|15%';
-Meetup.register();
+//Meetup.register();
