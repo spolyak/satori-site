@@ -21,7 +21,8 @@
     "passport-google-oauth": "^0.1.5",
     "passport-twitter": "^1.0.2",
     "request": "^2.34.0",
-    "underscore": "^1.6.0"
+    "underscore": "^1.6.0",
+    "feed": "^0.2.6" 
   },
   "engines": {
     "node": "0.10.x",

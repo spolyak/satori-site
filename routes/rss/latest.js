@@ -1,7 +1,7 @@
 var keystone = require('keystone'),
     Feed = require('feed');
 
-var Post = keystone.list('Post');
+var Link = keystone.list('Link');
 
 exports = module.exports = function(req, res) {
 
@@ -20,19 +20,17 @@ exports = module.exports = function(req, res) {
         }
     });
 
-    // Function requesting the last 5 posts to a database. This is just an
-    // example, use the way you prefer to get your posts.
-    Post.model.find({},function(err, posts) {
+    Link.model.find({},function(err, links) {
         if(err)
             res.send('404 Not found', 404);
         else {
-            for(var key in posts) {
+            for(var key in links) {
                 feed.addItem({
-                    title:          posts[key].title,
-                    link:           '/blog/post/' + posts[key].slug,
-                    description:    posts[key].content.brief,
-                    content:    posts[key].content.extended,
-                    date:           posts[key].publishedDate
+                    title:          links[key].label,
+                    link:           links[key].href,
+                    description:    links[key].description,
+                    content:    	links[key].description,
+                    date:           links[key].publishedDate
                 });
             }
             // Setting the appropriate Content-Type

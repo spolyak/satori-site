@@ -14,13 +14,7 @@ block content
 		.container
 			.row.ticker-row-spacing
 				.col-sm-12.ticker-row-spacing
-					ul.js-hidden#js-news
-						li.news-item
-							a(href="#") This is the 1st latest news item.
-						li.news-item							
-							a(href="#") This is the 2nd latest news item.
-						li.news-item							
-							a(href="#") This is the 3rd latest news item.														
+					ul.js-hidden#js-news												
 			.row
 				.col-sm-12.nav-links
 					.show-menu
@@ -40,6 +34,7 @@ block content
 							span Edit
 						a(href='/me').user.hidden-xs
 							img(src=(user.photo.exists ? user._.photo.thumbnail(27,27) : user.avatarUrl || '/images/avatar.png'), width=27).img-circle
+							| &nbsp;
 							=user.name.first
 						a(href='/signout')
 							span Sign out
