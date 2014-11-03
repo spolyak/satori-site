@@ -14,7 +14,7 @@ function scroll_to(clicked_link, nav_height) {
 
 jQuery(document).ready(function() {
 	
-	$('#js-news').ticker({controls: false,ajaxFeed: true,htmlFeed: false,feedUrl: '/rss/latest',feedType: 'xml'});
+	$('#js-news').ticker({controls: false,ajaxFeed: true,htmlFeed: false,feedUrl: '/rss/latest',feedType: 'xml', titleText: ''});
 	
 	$(".flip").hover(function(){
   		$(this).find(".card").toggleClass("flipped");
