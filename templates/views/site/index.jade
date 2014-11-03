@@ -14,7 +14,7 @@ block content
 		.container
 			.row.ticker-row-spacing
 				.col-sm-12.ticker-row-spacing
-					ul.js-hidden#js-news												
+					ul.js-hidden#js-news
 			.row
 				.col-sm-12.nav-links
 					.show-menu
@@ -218,47 +218,63 @@ block content
 					p
 						| What do you want to Experience? How do you Want to Grow? What do you want to Contribute?
 			.row
-				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12.gallery.slide-up
-					a.thumbnail.grayscale(href='assets/img/gallery/1.jpg', data-gal='prettyPhoto[screenshots]')
-						.gallery-wrap
-							img.img-responsive(src='assets/img/gallery/1.jpg', alt='')
-							.gallery-img
-				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12.gallery.slide-up
-					a.thumbnail.grayscale(href='assets/img/gallery/2.jpg', data-gal='prettyPhoto[screenshots]')
-						.gallery-wrap
-							img.img-responsive(src='assets/img/gallery/2.jpg', alt='')
-							.gallery-img
-				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12.gallery.slide-up
-					a.thumbnail.grayscale(href='assets/img/gallery/3.jpg', data-gal='prettyPhoto[screenshots]')
-						.gallery-wrap
-							img.img-responsive(src='assets/img/gallery/3.jpg', alt='')
-							.gallery-img
-				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12.gallery.slide-up
-					a.thumbnail.grayscale(href='assets/img/gallery/4.png', data-gal='prettyPhoto[screenshots]')
-						.gallery-wrap
-							img.img-responsive(src='assets/img/gallery/4.png', alt='')
-							.gallery-img
+				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12
+					.flip
+						.card
+							.face.front
+								img.img-responsive(src='assets/img/gallery/1.jpg', alt='')
+							.face.back
+								| Path	
+				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12
+					.flip
+						.card
+							.face.front
+								img.img-responsive(src='assets/img/gallery/2.jpg', alt='')
+							.face.back
+								| Back						
+				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12
+					.flip
+						.card
+							.face.front
+								img.img-responsive(src='assets/img/gallery/3.jpg', alt='')
+							.face.back
+								| Grow						
+				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12
+					.flip
+						.card
+							.face.front
+								img.img-responsive(src='assets/img/gallery/4.jpg', alt='')
+							.face.back
+								| Back																						
 			.row
-				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12.gallery.slide-up
-					a.thumbnail.grayscale(href='assets/img/gallery/5.jpg', data-gal='prettyPhoto[screenshots]')
-						.gallery-wrap
-							img.img-responsive(src='assets/img/gallery/5.jpg', alt='')
-							.gallery-img
-				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12.gallery.slide-up
-					a.thumbnail.grayscale(href='assets/img/gallery/6.jpg', data-gal='prettyPhoto[screenshots]')
-						.gallery-wrap
-							img.img-responsive(src='assets/img/gallery/6.jpg', alt='')
-							.gallery-img
-				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12.gallery.slide-up
-					a.thumbnail.grayscale(href='assets/img/gallery/7.jpg', data-gal='prettyPhoto[screenshots]')
-						.gallery-wrap
-							img.img-responsive(src='assets/img/gallery/7.jpg', alt='')
-							.gallery-img
-				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12.gallery.slide-up
-					a.thumbnail.grayscale(href='assets/img/gallery/8.png', data-gal='prettyPhoto[screenshots]')
-						.gallery-wrap
-							img.img-responsive(src='assets/img/gallery/8.png', alt='')
-							.gallery-img
+				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12
+					.flip
+						.card
+							.face.front
+								img.img-responsive(src='assets/img/gallery/5.jpg', alt='')
+							.face.back
+								| Path	
+				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12
+					.flip
+						.card
+							.face.front
+								img.img-responsive(src='assets/img/gallery/6.jpg', alt='')
+							.face.back
+								| Back						
+				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12
+					.flip
+						.card
+							.face.front
+								img.img-responsive(src='assets/img/gallery/7.jpg', alt='')
+							.face.back
+								| Back						
+				.col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ms-12
+					.flip
+						.card
+							.face.front
+								img.img-responsive(src='assets/img/gallery/8.jpg', alt='')
+							.face.back
+								| Back
 	// Testimonials 
 	.testimonials-container
 		.inner-testimonials
@@ -415,8 +431,8 @@ block content
 	script(src='assets/js/jquery.prettyPhoto.js')
 	script(src='assets/js/jquery.inview.js')
 	script(src='assets/js/main.js')
-	script(src='assets/js/easing.min.js')		
-	script(src='assets/js/jquery.svg.js')		
+	script(src='assets/js/easing.min.js')
+	script(src='assets/js/jquery.svg.js')
 	script(src='assets/js/jquery.svganim.js')
 	script(src='assets/js/jquery.backgroundvideo.min.js')
 	script(src='assets/js/froogaloop.min.js')
